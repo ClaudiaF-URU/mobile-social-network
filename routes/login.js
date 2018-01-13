@@ -1,7 +1,9 @@
 module.exports = function (app){
 	var pg = require('pg');
 	var md5 = require("blueimp-md5");
-	var conString = "postgres://postgres:masterkey@localhost/socialNetwork";
+	// var conString = "postgres://postgres:masterkey@localhost/socialNetwork";
+	var conString = "postgres://mvaodoqxwjxzvl:5645ee52b2e218001955276a012275d8f74c0afe1a330f3c1297e7bcf31356d1@ec2-23-23-243-111.compute-1.amazonaws.com:5432/d374l210cfo6bu";
+
 	
 	app.get("/login", function (req, res){
 		console.log("Login GET Request received");

@@ -3,7 +3,9 @@ var fs			= require('fs');
 var util  		= require('./util/utils');
 var datef		= require('dateformat');
 var pg			= require('pg');
-var conString	= "postgres://postgres:masterkey@localhost:5432/socialNetwork";
+// var conString	= "postgres://postgres:masterkey@localhost:5432/socialNetwork";
+var conString = "postgres://mvaodoqxwjxzvl:5645ee52b2e218001955276a012275d8f74c0afe1a330f3c1297e7bcf31356d1@ec2-23-23-243-111.compute-1.amazonaws.com:5432/d374l210cfo6bu";
+
 
 module.exports = function (req, res){
 	
