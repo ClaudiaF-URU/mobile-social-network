@@ -10,7 +10,7 @@ var likes =  require('./routes/likes');
 
 var app = express();
 
-app.set("port",5000);
+app.set("port",process.env.PORT || 10000);
 
 app.use(bodyP.urlencoded({extended: false}));
 app.use(bodyP.json());
