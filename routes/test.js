@@ -1,26 +1,31 @@
 module.exports = function (app) {
     var path = require('path');
 
-    app.get("/:test", function (req, res) {
+    app.get("/", function (req, res) {
         console.log('TEST GET request recieved');
 
-        if (req.params.off === 1) {
+        res.send({
+            "status": 200,
+            "message": "get received",
+        });
+    });
+
+    app.get("/:test", function (req, res) {
+        console.log('TEST PARAMS GET request recieved');
+
+        if (req.params.test === 1) {
             res.send({
                 "status": 200,
                 "message": "param received",
-                "value": req.params.off
-            });
-        } else if (req.params.off === 0) {
-            res.send({
-                "status": 200,
-                "message": "param received",
-                "value": req.params.off
+                "data": req.params.test
             });
         } else {
             res.send({
                 "status": 200,
-                "message": "GET received",
+                "message": "param received",
+                "data": req.params.test
             });
         }
+
     });
 }
